@@ -707,6 +707,10 @@ body {
     justify-content: unset;
   }
 
+  .trend-list {
+    margin-top: 50px;
+  }
+
   .trend-post {
     width: 49.5%;
   }
