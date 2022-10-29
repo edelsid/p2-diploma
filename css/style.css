@@ -32,6 +32,8 @@ body {
   background-size: cover;
   position: relative;
   z-index: 0;
+  padding-top: 36px;
+  padding-bottom: 146px;
 }
 
 .banner:after {
@@ -53,9 +55,7 @@ body {
   }
 
 .main-header { 
-  max-width: 680px;
-  padding-top: 128px;
-  padding-bottom: 146px;
+  max-width: 680px;  
   color: white;
   text-transform: uppercase;
   text-align: center;  
@@ -63,10 +63,10 @@ body {
   font-size: 45px;
   line-height: 75px;
   margin: auto;
+  margin-top: 128px;
 }
 
 .menu {
-  padding-top: 36px;
   display: flex; 
   justify-content: space-between;
 }
@@ -78,10 +78,6 @@ body {
 .menu-link {
   color: white;
   text-decoration: none;
-}
-
-.menu-link:hover {
-  text-decoration: underline;
 }
 
 .menu-item {
@@ -100,6 +96,25 @@ body {
   margin-left: 35px;
 }
 
+.menu-button {
+  background-color: rgba(0,0,0,0);
+  width: 23px;
+  height: 20px;
+  padding: 0;
+  border: none;
+}
+
+.menu-button-section {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff;
+}
+
+.menu-button-section:nth-child(-n+2) {
+  margin-bottom: 3px;
+}
+
 /* новая часть начинается здесь */
 
 .trend-list {
@@ -109,13 +124,35 @@ body {
 .list-content {
   display: flex;
   justify-content: space-between;
+  margin-top: 30px;
+}
+
+.trend-post {
+  width: 24.85%;
 }
 
 .trend-block {
   background-image: url(../images/trend1.jpg);
-  min-width: 410px;
+  width: 100%;
   min-height: 320px;
-  margin-top: 30px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #000000;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+}
+
+.trend-block:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.6;
+  z-index: -1;
 }
 
 .trend-block-1 {
@@ -203,10 +240,6 @@ body {
   text-decoration: none;
 }
 
-.post-tag-link:hover {
-  text-decoration: underline;
-}
-
 .post-header {
   margin: 0;
 }
@@ -220,19 +253,11 @@ body {
   color: #0f0d0e;  
 }
 
-.post-header-link:hover {
-  color: #b59f5b;
-}
-
 /* новая часть начинается здесь */
 
 .section-header {
   text-align: center;
   margin: 0;
-}
-
-.section-header:hover, .merch-header:hover {
-  color: #0f0d0e;
 }
 
 .section-header::after {
@@ -360,10 +385,6 @@ body {
   color: #323232;
 }
 
-.overview-header-link:hover {
-  color: #b59f5b;
-}
-
 .field {
   box-sizing: border-box;
   width: 270px;
@@ -398,10 +419,6 @@ body {
   background-size: 18px 18px;
   background-position: center center;
   background-repeat: no-repeat;
-}
-
-.search-button:hover, .email-button:hover {
-  background-color: #323232;
 }
 
 .messaging-form {
@@ -443,10 +460,6 @@ body {
   border: 3px solid #eeeeee;
   margin-right: 5px;
   margin-bottom: 5px;
-}
-
-.tag-button:hover {
-  border: 3px solid #b59f5b;
 }
 
 .tag-button-link {
@@ -513,13 +526,14 @@ body {
   padding: 50px 25px 0px 25px;
   border: 3px solid rgba(181,159,91,0.6);
   margin-top: -30px;
-  height: 265px;
+  height: calc(100% - 168px);
   position: relative;
   z-index: 0;
 }
 
 .merch-overview-text {
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 .merch-image {
@@ -538,6 +552,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin-top: 28px;
+  margin-bottom: 28px;
 }
 
 .old-price {
@@ -560,10 +575,6 @@ body {
   background-color: #b59f5b;
 }
 
-.price-button:hover {
-  background-color: #323232;
-}
-
 .price-button-text {
   font-family: opensans-bold;
   font-size: 14px;
@@ -576,10 +587,6 @@ body {
 .merch-text-link {
   color: #b59f5b;
   text-decoration: none;
-}
-
-.merch-text-link:hover {
-  text-decoration: underline;
 }
 
 /*новая часть заканчивается здесь*/
@@ -635,4 +642,139 @@ body {
   font-size: 12px;
   color: #999999;
   text-decoration: none;
+}
+
+
+@media (min-width: 1200px) {
+  .menu-button {
+    display: none;
+  }
+
+  .menu-link:hover, .post-tag-link:hover, .merch-text-link:hover {
+    text-decoration: underline;
+  }
+
+  .post-header-link:hover, .overview-header-link:hover {
+    color: #b59f5b;
+  }
+
+  .section-header:hover, .merch-header:hover {
+    color: #0f0d0e;
+  }
+
+  .search-button:hover, .email-button:hover, .price-button:hover {
+    background-color: #323232;
+  }
+  
+  .tag-button:hover {
+    border: 3px solid #b59f5b;
+  }
+}
+
+
+@media (min-width: 641px) and (max-width: 1199px) {
+  .banner {
+    background-image: url(../images/banner-bg-tablet.jpg);
+    padding-top: 50px;
+    padding-bottom: 120px;
+  }
+  
+  .banner-content {
+    width: 700px;
+  }
+  
+  .main-header {
+    font-size: 40px;
+  }
+
+  .menu-list {
+    display: none;
+  }
+
+  .menu-logo {
+    width: 160px;
+  }
+
+  .content-wrapper, .merch-list, .site-footer {
+    width: 700px;
+    margin-left: 36px;
+    margin-right: 36px;
+    padding: 0;
+  }
+
+  .list-content {
+    flex-wrap: wrap;
+    justify-content: unset;
+  }
+
+  .trend-post {
+    width: 49.5%;
+  }
+
+  .trend-post:nth-child(odd) {
+    margin-right: 0.5%;    
+  }
+
+  .trend-post:nth-child(-n+2) {
+    margin-bottom: 0.5%;
+  }
+
+  .article-blocks {
+    width: 392px;
+  }
+
+  .post-block {
+    flex-direction: column;
+  }
+
+  .post-block::after {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-top: 20px;
+    border-bottom: 3px solid #eeeeee;
+  }
+
+  .post-block:nth-child(n+2) {
+    margin-top: 40px;
+  }
+
+  .post-header-link {
+    font-size: 17px;
+  }
+
+  .news-image {
+    height: 302px;
+    width: 392px;
+  }
+
+  .text-content {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+
+  .merch-list {
+    margin-bottom: 50px;
+  }
+
+  .merch-list-content {
+    flex-wrap: wrap;
+  }
+
+  .merch-block {
+    width: 48.25%;
+  }
+
+  .merch-block:nth-child(-n+2) {
+    margin-bottom: 28px;
+  }
+
+  .merch-image {
+    width: 292px;
+  }
+
+  .merch-text {
+    height: calc(100% - 204px);
+  }
+
 }

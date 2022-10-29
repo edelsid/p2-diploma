@@ -35,6 +35,11 @@
           <a class="menu-link" href="#0">Контакты</a>
         </li>        
       </ul>
+      <button class="menu-button">
+        <span class="menu-button-section"></span>
+        <span class="menu-button-section"></span>
+        <span class="menu-button-section"></span>
+      </button>
     </nav>
     <h1 class="main-header">Блог о творчестве, спорте и образе жизни</h1>
   </div>
@@ -42,46 +47,54 @@
 
 <!--Тренды-->
 
-<div class="trend-list">
+<section class="trend-list">
   <h2 class="post-header-link section-header">Сейчас в тренде</h2>
   <div class="list-content">
-    <article class="banner trend-block">
-      <div class="trend-text">
-        <ul class="tags">
-          <li class="post-tag"><a class="post-tag-link" href="#0">Lifestyle</a></li>
-          <li class="post-tag"><a class="post-tag-link" href="#0">Interior</a></li>
-        </ul>
-        <h2 class="post-header"><a class="post-header-link trend-header" href="#0">Сейчас в тренде: сад на подоконнике</a></h2>
-      </div>
-    </article>
-    <article class="banner trend-block trend-block-1">
-      <div class="trend-text">
-        <ul class="tags">
-          <li class="post-tag"><a class="post-tag-link" href="#0">Food</a></li>
-        </ul>
-        <h2 class="post-header"><a class="post-header-link trend-header" href="#0">сыры на красивых картинках из интернета: какие они на вкус?</a></h2>
-      </div>
-    </article>
-    <article class="banner trend-block trend-block-2">
-      <div class="trend-text">
-        <ul class="tags">
-          <li class="post-tag"><a class="post-tag-link" href="#0">Lifestyle</a></li>
-          <li class="post-tag"><a class="post-tag-link" href="#0">Travel</a></li>
-        </ul>
-        <h2 class="post-header"><a class="post-header-link trend-header" href="#0">СОБИРАЕМСЯ В ПЕРВЫЙ ПОХОД В ГОРЫ</a></h2>
+    <article class="trend-post">
+      <div class="trend-block">
+        <div class="trend-text">
+          <ul class="tags">
+            <li class="post-tag"><a class="post-tag-link" href="#0">Lifestyle</a></li>
+            <li class="post-tag"><a class="post-tag-link" href="#0">Interior</a></li>
+          </ul>
+          <h3 class="post-header"><a class="post-header-link trend-header" href="#0">Сейчас в тренде: сад на подоконнике</a></h3>
         </div>
-      </article>
-      <article class="banner trend-block trend-block-3">
+      </div>
+    </article>
+    <article class="trend-post">
+      <div class="trend-block trend-block-1">
+        <div class="trend-text">
+          <ul class="tags">
+            <li class="post-tag"><a class="post-tag-link" href="#0">Food</a></li>
+          </ul>
+          <h3 class="post-header"><a class="post-header-link trend-header" href="#0">сыры на красивых картинках из интернета: какие они на вкус?</a></h3>
+        </div>
+      </div>
+    </article>
+    <article class="trend-post">
+      <div class="trend-block trend-block-2">
+        <div class="trend-text">
+          <ul class="tags">
+            <li class="post-tag"><a class="post-tag-link" href="#0">Lifestyle</a></li>
+            <li class="post-tag"><a class="post-tag-link" href="#0">Travel</a></li>
+          </ul>
+          <h3 class="post-header"><a class="post-header-link trend-header" href="#0">СОБИРАЕМСЯ В ПЕРВЫЙ ПОХОД В ГОРЫ</a></h3>
+          </div>
+        </div>
+    </article>
+    <article class="trend-post">
+      <div class="trend-block trend-block-3">
         <div class="trend-text">
           <ul class="tags">
             <li class="post-tag"><a class="post-tag-link" href="#0">Food</a></li>
             <li class="post-tag"><a class="post-tag-link" href="#0">Health</a></li>
           </ul>
-          <h2 class="post-header"><a class="post-header-link trend-header" href="#0">Сейчас в тренде: сКОЛЬКО ВИТАМИНА c В ЛИМОНАХ?</a></h2>
+          <h3 class="post-header"><a class="post-header-link trend-header" href="#0">Сейчас в тренде: сКОЛЬКО ВИТАМИНА c В ЛИМОНАХ?</a></h3>
         </div>
-      </article>
+      </div>
+    </article>
   </div> 
-</div>
+</section>
 
 <!--Основной контент-->
 
@@ -250,7 +263,7 @@
       </ul>
     </section>
     <section class="themes side-menu">
-      <h2 class="side-menu-title">Темы</h2>
+      <h3 class="side-menu-title">Темы</h3>
       <ul class="theme-list">
         <li class="theme-item">
           <a class="theme-link" href="#0">Красота</a>
@@ -284,13 +297,21 @@
 
 <!--Меню изделий.-->
 
-<div class="merch-list">
+<section class="merch-list">
   <h2 class="post-header-link section-header">Наши изделия</h2>
   <div class="merch-list-content">
     <article class="merch-block">
-      <img src="images/shop-item-desk1.jpg" class="merch-image" alt="Подушка с принтом"></img>
+      <picture class="merch-image">
+        <source
+          media="(max-width: 1199px)"
+          srcset="images/shop-item-tablet1.jpg">
+        <source
+          media="(min-width: 1200px)"
+          srcset="images/shop-item-desk1.jpg">
+        <img class="course__img" src="images/shop-item-desk1.jpg" alt="Подушка с принтом">
+      </picture>
       <div class="merch-text">
-        <h2 class="post-header-link merch-header">Подушки на диван</h2>
+        <h3 class="post-header-link merch-header">Подушки на диван</h3>
         <div class="merch-overview">
           <p class="merch-overview-text">Набор из двух подушек с модными принтами. Видео о создании <a class="merch-text-link" href="#0">здесь</a></p>
         </div>
@@ -306,9 +327,17 @@
       </div>
     </article>
     <article class="merch-block">
-      <img src="images/shop-item-desk2.jpg" class="merch-image" alt="Подушка с принтом"></img>
+      <picture class="merch-image">
+        <source
+          media="(max-width: 1199px)"
+          srcset="images/shop-item-tablet2.jpg">
+        <source
+          media="(min-width: 1200px)"
+          srcset="images/shop-item-desk2.jpg">
+        <img class="course__img" src="images/shop-item-desk2.jpg" alt="Кукла зайчик">
+      </picture>
       <div class="merch-text">
-        <h2 class="post-header-link merch-header">Кукла «Зайчик»</h2>
+        <h3 class="post-header-link merch-header">Кукла «Зайчик»</h3>
         <div class="merch-overview">
           <p class="merch-overview-text">Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена <a class="merch-text-link" href="#0">весенняя серия постов</a> в блоге и несколько подкастов.</p>
         </div>
@@ -324,9 +353,17 @@
       </div>
     </article>
     <article class="merch-block">
-      <img src="images/shop-item-desk3.jpg" class="merch-image" alt="Подушка с принтом"></img>
+      <picture class="merch-image">
+        <source
+          media="(max-width: 1199px)"
+          srcset="images/shop-item-tablet3.jpg">
+        <source
+          media="(min-width: 1200px)"
+          srcset="images/shop-item-desk3.jpg">
+        <img class="course__img" src="images/shop-item-desk3.jpg" alt="Шестиугольная рамкак">
+      </picture>
       <div class="merch-text">
-        <h2 class="post-header-link merch-header">Шестиугольная рамка</h2>
+        <h3 class="post-header-link merch-header">Шестиугольная рамка</h3>
         <div class="merch-overview">
           <p class="merch-overview-text">Необычная рамка для украшения дома из видео <a class="merch-text-link" href="#0">«Как сделать рамку из подручных средств за 30 минут»</a></p>
         </div>
@@ -342,12 +379,13 @@
       </div>
     </article>
   </div>
-</div>
+</section>
 
 
 <!--Подвал-->
 <footer class="site-footer">
-  <ul class="icon-list">
+  <section>
+    <ul class="icon-list">
       <li class="social-icon">
         <a href="#0" class="social-logo-link logo-dribble">
           <span class="visually-hidden">Dribble</span>
@@ -363,7 +401,8 @@
           <span class="visually-hidden">Tumblr</span>
         </a>
       </li>
-  </ul>
+    </ul>
+  </section>
     <div class="final-info">
       <a class="copyright-info" href="#0">Copyright © 2009–2019 City Blog LLC.</a>
     </div>
