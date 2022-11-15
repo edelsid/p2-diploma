@@ -22,6 +22,7 @@
 
 body {
   margin: 0;
+  position: relative;
 }
 
 .banner {
@@ -123,7 +124,6 @@ body {
 
 .list-content {
   display: flex;
-  justify-content: space-between;
   margin-top: 30px;
 }
 
@@ -141,6 +141,10 @@ body {
   background-size: cover;
   position: relative;
   z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 15px 20px 15px 20px;
 }
 
 .trend-block::after {
@@ -168,13 +172,8 @@ body {
 }
 
 .trend-text {
-  margin: auto;
   padding: 36px;
   border: 3px solid rgba(181,159,91,0.6);
-  position: absolute;
-  bottom: 15px;
-  left: 20px;
-  right: 20px;
 }
 
 /* новая часть заканчивается здесь */
@@ -425,9 +424,7 @@ body {
   margin-top: 22px;
 }
 
-.email-button {
-  margin-top: 18px;
-  width: 270px;
+.email-button, .popup-button {
   height: 48px;
   background-color: #b59f5b;
   border: none;
@@ -435,6 +432,16 @@ body {
   font-size: 14px;
   color: white;
   text-transform: uppercase;
+}
+
+.email-button {
+  margin-top: 18px;
+  width: 270px;
+}
+
+.popup-button {
+  margin-top: 26px;
+  width: 330px;
 }
 
 .visually-hidden {
@@ -514,7 +521,6 @@ body {
 
 .merch-list-content {
   display: flex;
-  justify-content: space-between;
   margin-top: 30px;
 }
 
@@ -644,7 +650,6 @@ body {
   text-decoration: none;
 }
 
-
 @media (min-width: 1200px) {
   .menu-button {
     display: none;
@@ -662,13 +667,171 @@ body {
     color: #0f0d0e;
   }
 
-  .search-button:hover, .email-button:hover, .price-button:hover {
+  .search-button:hover, .email-button:hover, .price-button:hover, .popup-button:hover {
     background-color: #323232;
   }
   
   .tag-button:hover {
     border: 3px solid #b59f5b;
   }
+
+  .trend-post:nth-child(-n+3) {
+    margin-right: 4px;
+  }
+
+  .merch-block:nth-child(-n+2) {
+    margin-right: 65px;
+  }
+
+  /*попап*/
+  
+  .popup_hidden::after {
+    content: "";
+    background-color: #000000;
+    opacity: 0.6;    
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+  }
+  
+  .popup-box {
+    width: 390px;
+    /*height: 590px;*/
+    padding: 50px 30px 50px 30px;	    
+    position: relative;
+    z-index: 2;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .popup_hidden {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;	
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 240px;
+    display: none;
+  }
+
+  .popup-close {
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    border: none;
+    cursor: pointer;	    
+    position: absolute;
+    top: -38px;
+    right: 0px;
+    color: #eeeeee;
+    font-size: 36px;
+    font-weight: bold;
+  }
+  
+  .popup-header {
+    text-align: center;
+  }
+
+  .popup-header::after {
+    content: "";
+    display: block;
+    width: 66px;
+    padding-top: 12px;
+    border-bottom: 3px solid rgba(181,159,91,0.4);
+    margin: auto;
+  }
+  
+  .popup-msg {
+    font-size: 20px;
+    font-family: opensans-bold;
+    margin: 0px;
+    text-transform: uppercase;
+  }
+
+  .question-field {
+    width: 100%;
+    height: 48px;
+    border: none;
+    font-family: opensans-regular;
+    font-size: 13px;  
+    color: rgba(0,0,0,0.54);
+    margin-top: 8px;
+  }
+
+  .question-text {
+    font-family: opensans-regular;
+    font-size: 13px;    
+  }
+
+  .select-field {
+    padding-left: 20px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url(../svg/form-arrows.svg);
+    background-repeat: no-repeat;
+    background-position: right 24px center;
+    background-size: 8px 16px;
+  }
+
+  .wide-field {
+    min-height: 131px;
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 131px;
+    padding: 20px;
+  }
+  
+  .question-field:focus {
+    border: 1px solid #b59f5b;   
+    outline: none;
+  }
+
+  .form-row {
+    margin-top: 30px;
+  }
+
+  .radio-group {
+    margin-top: 8px;
+  }
+
+  .radio-text {
+    font-family: opensans-regular;
+    font-size: 13px; 
+  }
+
+  .radio-text:nth-child(2) {
+    margin-right: 15px;
+  }
+
+  .radio-text::before {
+    content: "";
+    display: inline-block;    
+    width: 15px;
+    height: 15px;  
+    background-image: url(../svg/form-empty-circle.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 15px;
+    margin-right: 4px;
+    vertical-align: middle;
+  }
+
+  .radio-input {
+    display:none;
+  }
+
+  .radio-input:checked + .radio-text::before {
+    background-image: url(../svg/form-circle.svg);
+  }
+
 }
 
 
@@ -680,7 +843,7 @@ body {
   }
   
   .banner-content {
-    width: 700px;
+    width: 91%;
   }
   
   .main-header {
@@ -696,7 +859,7 @@ body {
   }
 
   .content-wrapper, .merch-list, .site-footer {
-    width: 700px;
+    width: 91%;
     margin-left: 36px;
     margin-right: 36px;
     padding: 0;
@@ -711,20 +874,9 @@ body {
     margin-top: 50px;
   }
 
-  .trend-post {
-    width: 49.5%;
-  }
-
-  .trend-post:nth-child(odd) {
-    margin-right: 0.5%;    
-  }
-
-  .trend-post:nth-child(-n+2) {
-    margin-bottom: 0.5%;
-  }
-
   .article-blocks {
-    width: 392px;
+    width: 51%;
+    flex-grow: 1;
   }
 
   .post-block {
@@ -757,6 +909,10 @@ body {
     margin-top: 15px;
   }
 
+  .side-menus {
+    margin-left: 36px;
+  }
+
   .merch-list {
     margin-bottom: 50px;
   }
@@ -766,19 +922,52 @@ body {
   }
 
   .merch-block {
-    width: 48.25%;
+    width: 46%;
+    display: flex;
+    flex-direction: column;
   }
 
   .merch-block:nth-child(-n+2) {
     margin-bottom: 28px;
   }
 
+  .merch-block:nth-child(odd) {
+    margin-right: 22px;
+  }
+
   .merch-image {
-    width: 292px;
+    width: calc(100% - 44px);
   }
 
-  .merch-text {
-    height: calc(100% - 204px);
+  .course-img {
+    width: 100%;
   }
 
+  .popup_hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1199px) and (orientation: portrait) {
+  .trend-post {
+    width: 49.5%;
+  }
+
+  .trend-post:nth-child(odd) {
+    margin-right: 4px;
+  }
+
+  .trend-post:nth-child(-n+2) {
+    margin-bottom: 4px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1199px) and (orientation: landscape) {
+  .trend-post {
+    width: 24.6%;
+  }
+
+  .trend-post:nth-child(-n+3) {
+    margin-right: 4px;
+  }
 }

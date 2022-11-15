@@ -96,6 +96,52 @@
   </div> 
 </section>
 
+<!--Попап-->
+
+<div class="popup_hidden">
+	<div class="popup-box">
+		<label class="popup-close" type="button">&times;</label>
+		<header class="popup-header">
+			<h3 class="popup-msg">Ваш фидбек</h3>
+		</header>
+    <section class="form-row">
+      <label class="question-text">Как часто вы заходите на сайт?
+      <form class="question1-form" action="#0">
+        <select class="question-field select-field">
+          <option>Почти каждый день</option>
+          <option>Раз в несколько дней</option>
+          <option>Раз в несколько недель</option>
+          <option>Несколько раз в год</option>
+        </select>  
+      </form>
+      </label>
+    </section>
+    <div class="form-row">
+      <span class="question-text">Вы подписаны на e-mail рассылку?</span>
+      <div class="radio-group">
+        <label class="radio-point">
+          <input type="radio" name="radio-choice" class="radio-input">
+          <span class="radio-text">Да</span>
+        </label>
+        <label class="radio-point">
+          <input type="radio" name="radio-choice" class="radio-input">
+          <span class="radio-text">Нет</span>
+        </label>
+      </div>
+    </div>
+    <div class="form-row">
+      <label class="question-text">Расскажите, какой контент вы хотели бы видеть
+        на нашем сайте?
+        <form class="question3-form" action="#0">
+          <textarea type="" class="question-field wide-field" placeholder="Может, больше рецептов?"></textarea>
+        </form>
+      </label>
+    </div>
+    <button type="submit" class="popup-button">Отправить<span class="visually-hidden">Отправить</span>
+    </button> 
+	</div>
+</div>
+
 <!--Основной контент-->
 
 <main class="article-list">
@@ -190,6 +236,7 @@
   </main>
 
 <!--Боковые меню-->
+
   <aside class="side-menus">
     <section class="short-news side-menu">
       <h3 class="side-menu-title">Новые посты</h3>
@@ -308,7 +355,7 @@
         <source
           media="(min-width: 1200px)"
           srcset="images/shop-item-desk1.jpg">
-        <img class="course__img" src="images/shop-item-desk1.jpg" alt="Подушка с принтом">
+        <img class="course-img" src="images/shop-item-desk1.jpg" alt="Подушка с принтом">
       </picture>
       <div class="merch-text">
         <h3 class="post-header-link merch-header">Подушки на диван</h3>
@@ -334,7 +381,7 @@
         <source
           media="(min-width: 1200px)"
           srcset="images/shop-item-desk2.jpg">
-        <img class="course__img" src="images/shop-item-desk2.jpg" alt="Кукла зайчик">
+        <img class="course-img" src="images/shop-item-desk2.jpg" alt="Кукла зайчик">
       </picture>
       <div class="merch-text">
         <h3 class="post-header-link merch-header">Кукла «Зайчик»</h3>
@@ -360,7 +407,7 @@
         <source
           media="(min-width: 1200px)"
           srcset="images/shop-item-desk3.jpg">
-        <img class="course__img" src="images/shop-item-desk3.jpg" alt="Шестиугольная рамкак">
+        <img class="course-img" src="images/shop-item-desk3.jpg" alt="Шестиугольная рамкак">
       </picture>
       <div class="merch-text">
         <h3 class="post-header-link merch-header">Шестиугольная рамка</h3>
