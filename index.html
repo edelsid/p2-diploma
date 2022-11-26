@@ -14,7 +14,7 @@
 <header class="banner">
   <div class="banner-content">
     <nav class="menu">
-      <a href="#0"><img class="menu-logo" src="svg/noemi-logo.svg" alt="Логотип"></img></a>
+      <a class="menu-logo-link" href="#0"><img class="menu-logo" src="svg/noemi-logo.svg" alt="Логотип"></img></a>
       <ul class="menu-list">
         <li class ="menu-item">
           <a class="menu-link" href="#0">Главная</a>
@@ -100,51 +100,49 @@
 
 <div class="popup_hidden">
 	<div class="popup-box">
-		<label class="popup-close" type="button">&times;</label>
-		<header class="popup-header">
-			<h3 class="popup-msg">Ваш фидбек</h3>
-		</header>
-    <section class="form-row">
-      <label class="question-text">Как часто вы заходите на сайт?
-      <form class="question1-form" action="#0">
-        <select class="question-field select-field">
-          <option>Почти каждый день</option>
-          <option>Раз в несколько дней</option>
-          <option>Раз в несколько недель</option>
-          <option>Несколько раз в год</option>
-        </select>  
-      </form>
-      </label>
-    </section>
-    <div class="form-row">
-      <span class="question-text">Вы подписаны на e-mail рассылку?</span>
-      <div class="radio-group">
-        <label class="radio-point">
-          <input type="radio" name="radio-choice" class="radio-input">
-          <span class="radio-text">Да</span>
+    <form class="question1-form" action="#0">
+      <label class="popup-close" type="button">&times;</label>
+        <header class="popup-header">
+          <h3 class="popup-msg">Ваш фидбек</h3>
+        </header>
+      <section class="form-row">
+        <label class="question-text">Как часто вы заходите на сайт?      
+          <select class="question-field select-field">
+            <option>Почти каждый день</option>
+            <option>Раз в несколько дней</option>
+            <option>Раз в несколько недель</option>
+            <option>Несколько раз в год</option>
+          </select>  
         </label>
-        <label class="radio-point">
-          <input type="radio" name="radio-choice" class="radio-input">
-          <span class="radio-text">Нет</span>
+      </section>
+      <div class="form-row">
+        <span class="question-text">Вы подписаны на e-mail рассылку?</span>
+        <div class="radio-group">
+          <label class="radio-point">
+            <input type="radio" name="radio-choice" class="radio-input">
+            <span class="radio-text">Да</span>
+          </label>
+          <label class="radio-point">
+            <input type="radio" name="radio-choice" class="radio-input">
+            <span class="radio-text">Нет</span>
+          </label>
+        </div>
+      </div>
+      <div class="form-row">
+        <label class="question-text">Расскажите, какой контент вы хотели бы видеть
+        на нашем сайте?
+          <textarea type="" class="question-field wide-field" placeholder="Может, больше рецептов?"></textarea>
         </label>
       </div>
-    </div>
-    <div class="form-row">
-      <label class="question-text">Расскажите, какой контент вы хотели бы видеть
-        на нашем сайте?
-        <form class="question3-form" action="#0">
-          <textarea type="" class="question-field wide-field" placeholder="Может, больше рецептов?"></textarea>
-        </form>
-      </label>
-    </div>
-    <button type="submit" class="popup-button">Отправить<span class="visually-hidden">Отправить</span>
-    </button> 
+      <button type="submit" class="popup-button">Отправить<span class="visually-hidden">Отправить</span>
+      </button>
+    </form> 
 	</div>
 </div>
 
 <!--Основной контент-->
 
-<main class="article-list">
+<div class="article-list">
   <div class="content-wrapper">
   <main class="article-blocks">
     <article class="post-block">
@@ -340,7 +338,7 @@
     </section>
   </aside>
   </div>
-</main>
+</div>
 
 <!--Меню изделий.-->
 
@@ -349,6 +347,9 @@
   <div class="merch-list-content">
     <article class="merch-block">
       <picture class="merch-image">
+        <source
+          media="(max-width: 640px)"
+          srcset="images/shop-item-mobile1.jpg">
         <source
           media="(max-width: 1199px)"
           srcset="images/shop-item-tablet1.jpg">
@@ -376,6 +377,9 @@
     <article class="merch-block">
       <picture class="merch-image">
         <source
+          media="(max-width: 640px)"
+          srcset="images/shop-item-mobile2.jpg">
+        <source
           media="(max-width: 1199px)"
           srcset="images/shop-item-tablet2.jpg">
         <source
@@ -401,6 +405,9 @@
     </article>
     <article class="merch-block">
       <picture class="merch-image">
+        <source
+          media="(max-width: 640px)"
+          srcset="images/shop-item-mobile3.jpg">
         <source
           media="(max-width: 1199px)"
           srcset="images/shop-item-tablet3.jpg">
