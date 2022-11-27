@@ -947,9 +947,9 @@ body {
   }
 }
 
-@media (min-width: 641px) and (max-width: 1199px) and (orientation: portrait) {
+@media (min-width: 641px) and (max-width: 1199px) and (orientation: portrait), (max-width: 915px) and (orientation: landscape) {
   .trend-post {
-    width: 49.75%;
+    width: 49.7%;
   }
 
   .trend-post:nth-child(odd) {
@@ -965,7 +965,7 @@ body {
   }
 }
 
-@media (min-width: 641px) and (max-width: 1199px) and (orientation: landscape) {
+@media (min-width: 916px) and (max-width: 1199px) and (orientation: landscape) {
   .trend-post {
     width: 24.74%;
   }
@@ -1172,7 +1172,7 @@ body {
 
 }
 
-@media (max-width: 640px) and (orientation: landscape) {
+/*@media (max-width: 640px) and (orientation: landscape) {
   .trend-post {
     width: 49.65%;
   }
@@ -1184,4 +1184,4 @@ body {
   .trend-post:nth-child(-n+2) {
     margin-bottom: 4px;
   }
-}
+}*/
